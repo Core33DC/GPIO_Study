@@ -36,12 +36,13 @@ SUBDIRS :=  \
 ../interrupt \
 ../led \
 ../LCD \
+../TimerCounter \
 ../UART
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../UART/uart3.c
+../TimerCounter/TimeCount4.c
 
 
 PREPROCESSING_SRCS += 
@@ -51,16 +52,16 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-UART/uart3.o
+TimerCounter/TimeCount4.o
 
 OBJS_AS_ARGS +=  \
-UART/uart3.o
+TimerCounter/TimeCount4.o
 
 C_DEPS +=  \
-UART/uart3.d
+TimerCounter/TimeCount4.d
 
 C_DEPS_AS_ARGS +=  \
-UART/uart3.d
+TimerCounter/TimeCount4.d
 
 OUTPUT_FILE_PATH +=GPIO.elf
 
@@ -76,7 +77,7 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-UART/uart3.o: ../UART/uart3.c
+TimerCounter/TimeCount4.o: ../TimerCounter/TimeCount4.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega128a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -3,22 +3,17 @@ Archive member included to satisfy reference by file (symbol)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
-                              UART/uart3.o (__do_copy_data)
+                              TimerCounter/TimeCount4.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
-                              UART/uart3.o (__do_clear_bss)
+                              TimerCounter/TimeCount4.o (__do_clear_bss)
 
 Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
- .text          0x00000000        0x0 UART/uart3.o
- .data          0x00000000        0x0 UART/uart3.o
- .bss           0x00000000        0x0 UART/uart3.o
- .text.putch    0x00000000        0xe UART/uart3.o
- .text.puts_USART0
-                0x00000000       0x1a UART/uart3.o
- .bss.TX_data   0x00000000        0x1 UART/uart3.o
- .bss.TX_flag   0x00000000        0x1 UART/uart3.o
+ .text          0x00000000        0x0 TimerCounter/TimeCount4.o
+ .data          0x00000000        0x0 TimerCounter/TimeCount4.o
+ .bss           0x00000000        0x0 TimerCounter/TimeCount4.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
@@ -84,7 +79,7 @@ Linker script and memory map
 
 Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
-LOAD UART/uart3.o
+LOAD TimerCounter/TimeCount4.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a
 END GROUP
@@ -194,7 +189,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x10e
+.text           0x00000000      0x184
  *(.vectors)
  .vectors       0x00000000       0x8c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
                 0x00000000                __vector_default
@@ -273,10 +268,8 @@ END GROUP
                 0x000000c6                __vector_19
                 0x000000c6                __vector_7
                 0x000000c6                __vector_27
-                0x000000c6                __vector_5
                 0x000000c6                __vector_33
                 0x000000c6                __vector_4
-                0x000000c6                __vector_9
                 0x000000c6                __vector_2
                 0x000000c6                __vector_21
                 0x000000c6                __vector_15
@@ -290,15 +283,19 @@ END GROUP
                 0x000000c6                __vector_20
                 0x000000c8                . = ALIGN (0x2)
  *(.text.*)
- .text.getch    0x000000c8        0xe UART/uart3.o
-                0x000000c8                getch
- .text.main     0x000000d6       0x34 UART/uart3.o
-                0x000000d6                main
-                0x0000010a                . = ALIGN (0x2)
+ .text.main     0x000000c8       0x34 TimerCounter/TimeCount4.o
+                0x000000c8                main
+ .text.__vector_9
+                0x000000fc       0x54 TimerCounter/TimeCount4.o
+                0x000000fc                __vector_9
+ .text.__vector_5
+                0x00000150       0x30 TimerCounter/TimeCount4.o
+                0x00000150                __vector_5
+                0x00000180                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000010a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
-                0x0000010a                _exit
-                0x0000010a                exit
+ .fini9         0x00000180        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+                0x00000180                _exit
+                0x00000180                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -317,16 +314,16 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000010a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .fini0         0x00000180        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000010e                _etext = .
+                0x00000184                _etext = .
 
-.data           0x00800100       0x12 load address 0x0000010e
+.data           0x00800100       0x12 load address 0x00000184
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  .data.FND_DATA_TBL
-                0x00800100       0x12 UART/uart3.o
+                0x00800100       0x12 TimerCounter/TimeCount4.o
                 0x00800100                FND_DATA_TBL
  *(.gnu.linkonce.d*)
  *(.rodata)
@@ -336,20 +333,28 @@ END GROUP
                 0x00800112                _edata = .
                 0x00800112                PROVIDE (__data_end, .)
 
-.bss            0x00800112        0x0
+.bss            0x00800112        0x3
                 0x00800112                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
+ .bss.timer0Cnt
+                0x00800112        0x1 TimerCounter/TimeCount4.o
+                0x00800112                timer0Cnt
+ .bss.Time_STOP
+                0x00800113        0x1 TimerCounter/TimeCount4.o
+                0x00800113                Time_STOP
+ .bss.time_s    0x00800114        0x1 TimerCounter/TimeCount4.o
+                0x00800114                time_s
  *(COMMON)
-                0x00800112                PROVIDE (__bss_end, .)
-                0x0000010e                __data_load_start = LOADADDR (.data)
-                0x00000120                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800115                PROVIDE (__bss_end, .)
+                0x00000184                __data_load_start = LOADADDR (.data)
+                0x00000196                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800112        0x0
+.noinit         0x00800115        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800112                _end = .
+                0x00800115                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -391,7 +396,7 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 UART/uart3.o
+ .comment       0x00000000       0x30 TimerCounter/TimeCount4.o
                                  0x31 (size before relaxing)
 
 .note.gnu.avr.deviceinfo
@@ -414,42 +419,42 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x38
+.debug_aranges  0x00000000       0x30
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x38 UART/uart3.o
+                0x00000000       0x30 TimerCounter/TimeCount4.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x912
+.debug_info     0x00000000      0x898
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x780 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
- .debug_info    0x00000780      0x192 UART/uart3.o
+ .debug_info    0x00000780      0x118 TimerCounter/TimeCount4.o
 
-.debug_abbrev   0x00000000      0x83a
+.debug_abbrev   0x00000000      0x7b0
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x718 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
- .debug_abbrev  0x00000718      0x122 UART/uart3.o
+ .debug_abbrev  0x00000718       0x98 TimerCounter/TimeCount4.o
 
-.debug_line     0x00000000      0x2c5
+.debug_line     0x00000000      0x2e3
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x16a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
- .debug_line    0x0000016a      0x15b UART/uart3.o
+ .debug_line    0x0000016a      0x179 TimerCounter/TimeCount4.o
 
-.debug_frame    0x00000000       0x60
+.debug_frame    0x00000000       0x64
  *(.debug_frame)
- .debug_frame   0x00000000       0x60 UART/uart3.o
+ .debug_frame   0x00000000       0x64 TimerCounter/TimeCount4.o
 
-.debug_str      0x00000000      0x3de
+.debug_str      0x00000000      0x3f7
  *(.debug_str)
  .debug_str     0x00000000      0x27d C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega128a/avr51/crtatmega128a.o
- .debug_str     0x0000027d      0x161 UART/uart3.o
-                                0x19f (size before relaxing)
+ .debug_str     0x0000027d      0x17a TimerCounter/TimeCount4.o
+                                0x1ae (size before relaxing)
 
-.debug_loc      0x00000000       0xa3
+.debug_loc      0x00000000       0x78
  *(.debug_loc)
- .debug_loc     0x00000000       0xa3 UART/uart3.o
+ .debug_loc     0x00000000       0x78 TimerCounter/TimeCount4.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -469,9 +474,9 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x28
+.debug_ranges   0x00000000       0x20
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x28 UART/uart3.o
+ .debug_ranges  0x00000000       0x20 TimerCounter/TimeCount4.o
 
 .debug_macro
  *(.debug_macro)

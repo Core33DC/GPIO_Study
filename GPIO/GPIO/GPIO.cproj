@@ -142,6 +142,7 @@
     <Folder Include="interrupt" />
     <Folder Include="led" />
     <Folder Include="LCD" />
+    <Folder Include="TimerCounter" />
     <Folder Include="UART" />
   </ItemGroup>
   <ItemGroup>
@@ -200,15 +201,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UART\uart4.c">
+    <Compile Include="TimerCounter\TimeCount4.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="TimerCounter\TimeCount2.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter\TimeCount3.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter\TimeCount.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter\TimeCount1.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="UART\uart4.c">
+      <SubType>compile</SubType>
+    </None>
     <None Include="UART\uart2.c">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="UART\uart3.c">
+    <None Include="UART\uart3.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
