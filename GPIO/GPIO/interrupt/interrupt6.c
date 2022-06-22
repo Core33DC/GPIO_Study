@@ -10,7 +10,7 @@
 // 1. FND 숫자가 초마다 증가
 // 2. 0번 버튼을 누르면 0으로 초기화 및 정지, 2번 버튼을 누르면 다시 동작
 
-#define F_CPU 7432800UL
+#define F_CPU 7372800UL
 #include <avr/io.h>	//AVR 입출력에 대한 헤더 파일
 #include <avr/interrupt.h>	//AVR 인터럽트에 대한 헤더파일
 #include <util/delay.h>	//delay 함수사용을 위한 헤더파일

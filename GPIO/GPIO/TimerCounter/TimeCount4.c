@@ -10,7 +10,7 @@
 // #### 타이머와 인터럽트로 FND 점멸(1) (버튼 추가) ####
 
 
-#define F_CPU 7432800UL
+#define F_CPU 7372800UL
 #include <avr/io.h>  //AVR 입출력에 대한 헤더 파일
 #include <avr/interrupt.h>  //AVR 인터럽트에 대한 헤더 파일
 

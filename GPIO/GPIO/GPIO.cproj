@@ -142,6 +142,8 @@
     <Folder Include="interrupt" />
     <Folder Include="led" />
     <Folder Include="LCD" />
+    <Folder Include="PWM" />
+    <Folder Include="TimerCounter16" />
     <Folder Include="TimerCounter" />
     <Folder Include="UART" />
   </ItemGroup>
@@ -201,9 +203,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TimerCounter\TimeCount4.c">
+    <None Include="TimerCounter16\TimeCount16_2.c">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="TimerCounter16\TimeCount16_3.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="PWM\pwm.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter16\TimeCount16.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter16\TimeCount16_1.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter\TimeCount4.c">
+      <SubType>compile</SubType>
+    </None>
     <None Include="TimerCounter\TimeCount2.c">
       <SubType>compile</SubType>
     </None>

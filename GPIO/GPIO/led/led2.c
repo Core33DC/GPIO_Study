@@ -4,7 +4,7 @@
  * Created: 2022-06-17 오후 1:54:30
  *  Author: pknu
  */ 
-#define  F_CPU 7432800
+#define  F_CPU 7372800UL
 #include <avr/io.h>
 #include <util/delay.h>
 

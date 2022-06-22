@@ -7,7 +7,7 @@
 
 // #### 인터럽트로 LED 점멸 ####
  
-#define F_CPU 74328090UL
+#define F_CPU 7372800UL
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
