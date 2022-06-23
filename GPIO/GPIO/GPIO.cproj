@@ -142,6 +142,9 @@
     <Folder Include="interrupt" />
     <Folder Include="led" />
     <Folder Include="LCD" />
+    <Folder Include="led_1" />
+    <Folder Include="Motor" />
+    <Folder Include="KeypadTest" />
     <Folder Include="PWM" />
     <Folder Include="TimerCounter16" />
     <Folder Include="TimerCounter" />
@@ -203,12 +206,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="PWM\piezo2.c">
+      <SubType>compile</SubType>
+    </None>
     <None Include="TimerCounter16\TimeCount16_2.c">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="TimerCounter16\TimeCount16_3.c">
+    <None Include="PWM\piezo.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
+    <None Include="PWM\piezo1.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TimerCounter16\TimeCount16_3.c">
+      <SubType>compile</SubType>
+    </None>
     <None Include="PWM\pwm.c">
       <SubType>compile</SubType>
     </None>
@@ -240,6 +252,37 @@
       <SubType>compile</SubType>
     </None>
     <None Include="UART\uart3.c">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Motor\11_Step1Phase_Example.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Motor\12_Step12Phase_Example_01.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Motor\Step2Phase.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="led_1\led_1.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="led_1\led_2.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="PWM\piezoUart.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="PWM\piezoUart1.c">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KeypadTest\keypadTest.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="led_1\led_3.c">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>

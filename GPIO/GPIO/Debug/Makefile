@@ -36,6 +36,9 @@ SUBDIRS :=  \
 ../interrupt \
 ../led \
 ../LCD \
+../led_1 \
+../Motor \
+../KeypadTest \
 ../PWM \
 ../TimerCounter16 \
 ../TimerCounter \
@@ -44,7 +47,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../TimerCounter16/TimeCount16_3.c
+../KeypadTest/keypadTest.c
 
 
 PREPROCESSING_SRCS += 
@@ -54,16 +57,16 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-TimerCounter16/TimeCount16_3.o
+KeypadTest/keypadTest.o
 
 OBJS_AS_ARGS +=  \
-TimerCounter16/TimeCount16_3.o
+KeypadTest/keypadTest.o
 
 C_DEPS +=  \
-TimerCounter16/TimeCount16_3.d
+KeypadTest/keypadTest.d
 
 C_DEPS_AS_ARGS +=  \
-TimerCounter16/TimeCount16_3.d
+KeypadTest/keypadTest.d
 
 OUTPUT_FILE_PATH +=GPIO.elf
 
@@ -79,7 +82,7 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-TimerCounter16/TimeCount16_3.o: ../TimerCounter16/TimeCount16_3.c
+KeypadTest/keypadTest.o: ../KeypadTest/keypadTest.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega128a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
