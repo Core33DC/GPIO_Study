@@ -2,7 +2,5 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-LCD\lcd.c
-
-Motor\Step12Phase_1.c
+keypad.c
 

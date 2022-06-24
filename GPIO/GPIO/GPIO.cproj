@@ -151,9 +151,15 @@
     <Folder Include="UART" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LCD\lcd.c">
+    <Compile Include="LCD\lcd.c">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
+    <Compile Include="Motor\Step12Phase_2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Motor\Step12PiezoLCD.c">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="LCD\Lcd.h">
       <SubType>compile</SubType>
     </None>
@@ -185,9 +191,6 @@
       <SubType>compile</SubType>
     </None>
     <None Include="interrupt\interrupt3.c">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="fnd.c">
       <SubType>compile</SubType>
     </None>
     <None Include="input1.c">
@@ -256,12 +259,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Motor\11_Step1Phase_Example.c">
+    <None Include="Motor\Step1Phase.c">
       <SubType>compile</SubType>
     </None>
-    <None Include="Motor\12_Step12Phase_Example_01.c">
+    <Compile Include="Motor\Step12Phase_1.c">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <None Include="Motor\Step2Phase.c">
       <SubType>compile</SubType>
     </None>
@@ -279,10 +282,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KeypadTest\keypadTest.c">
+    <None Include="led_1\fndled1.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
+    <None Include="led_1\led_5.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="led_1\fndled.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="led_1\led_4.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="KeypadTest\keypadTest.c">
+      <SubType>compile</SubType>
+    </None>
     <None Include="led_1\led_3.c">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LCD\lcdTest3.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="led_1\fnd.c">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>
